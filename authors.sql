@@ -75,8 +75,7 @@ UPDATE
 SELECT * FROM public.authors WHERE birth_year BETWEEN 2021 AND 1961;
 SELECT * FROM public.authors WHERE birth_year NOT BETWEEN 2021 AND 1981;
 
-SELECT * FROM public.authors 
-WHERE 2021-(birth_year) > 60
+SELECT * FROM public.authors WHERE date_part('year', CURRENT_DATE) - (birth_year) < 60
 ORDER BY birth_year DESC;
 
 SELECT * FROM public.authors ORDER BY birth_year ASC;
