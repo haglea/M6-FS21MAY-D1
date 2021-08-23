@@ -59,7 +59,7 @@ UPDATE
 
 SELECT DISTINCT category FROM public.books;
 SELECT category FROM public.books;
-SELECT name FROM public.books WHERE name LIKE '%';
+SELECT name FROM public.books WHERE name LIKE 'A%';
 SELECT * FROM public.books WHERE name LIKE '%rig%';
 SELECT category, published_at FROM public.books;
 SELECT published_at FROM public.books;
